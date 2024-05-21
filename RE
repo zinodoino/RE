@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path to Enlightenment - A Buddhist Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Path to Enlightenment</h1>
+    <p>Welcome to your journey towards enlightenment. Choose your path wisely.</p>
+    <div id="output"></div>
+    <button id="startBtn" onclick="startGame()">Start</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#game {
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+// Initial game state
+let gameStarted = false;
+
+// Function to start the game
+function startGame() {
+  gameStarted = true;
+  displayMessage("You begin your journey...");
+  // You can add more game logic here
+}
+
+// Function to display messages in the game area
+function displayMessage(message) {
+  const output = document.getElementById("output");
+  output.innerHTML += `<p>${message}</p>`;
+}
